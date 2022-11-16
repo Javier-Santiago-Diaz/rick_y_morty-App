@@ -2,7 +2,7 @@ import Card from './Card';
 
 export default function Cards(props) {
    const { characters } = props;
-   return (<div id='cards'>{
+   return (<div id='cajaCards'>{
       characters.map((ele, index) =>
          <Card
             name={ele.name}
