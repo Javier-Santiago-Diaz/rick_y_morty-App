@@ -5,9 +5,24 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(39, 35, 35);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#cards {
+  display: flex;
+  justify-content: space-around;
+  color: aliceblue;
+}
+
+#card {
+  color: aliceblue;
+}
+
+#unob {
+  color: blue;
 }
