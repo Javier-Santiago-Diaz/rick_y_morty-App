@@ -13,16 +13,16 @@ code {
     monospace;
 }
 
+#card {
+  color: aliceblue;
+}
+
 #cards {
   display: flex;
   justify-content: space-around;
   color: aliceblue;
 }
 
-#card {
-  color: aliceblue;
-}
-
-#unob {
+#boton1 {
   color: blue;
 }
