@@ -1,3 +1,5 @@
+import s from './SearchBar.mocule.css'
+
 export default function SearchBar(props) {
    const { onSearch } = props
    return (

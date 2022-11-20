@@ -5,81 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(39, 35, 35);
+  background-image: URL("./assets/fonfo.jpg.crdownload");
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-#cajaCard {
-  color: aliceblue;
-  position: relative;
-  display: inline-block;
-}
-
-#cajaCards {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-#botonX {
-  color: white;
-  background: red;
-  border-radius: 3px;
-  position: absolute;
-  top: 78px;
-  left: 143px;
-}
-
-#img1 {
-  width: 170px;
-  height: 200px;
-  border-top: 30px solid white;
-  border-bottom: 30px solid white;
-  border-radius: 5px;
-}
-
-#textName {
-  font-size: 15px;
-  color: black;
-  position: relative;
-  top: 270px;
-  left: center;
-  background-color: rgba(118, 107, 107, 0.37);
-  border: 20px;
-}
-
-.textSpecies {
-  font-size: 14px;
-  color: black;
-  position: absolute;
-  top: 298px;
-  left: 10px;
-
-}
-
-.textGender {
-  font-size: 14px;
-  color: black;
-  position: relative;
-  top: 265px;
-  left: 30px;
-}
-
-#input {
-  border-radius: 5px;
-  height: 29px;
-}
-
-#TextBtSearch {
-  background: rgb(124, 181, 70);
-  color: white;
-  height: 30px;
-  border-radius: 5px;
-}
-
-#TextBtSearch:hover {
-  background: rgb(44, 26, 133);
 }
