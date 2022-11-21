@@ -1,4 +1,14 @@
 .App {
    text-align: center;
-   background: url("");
+   background-image: URL('../src/assets/fonfo.jpg');
+}
+
+.ContainerCard {
+   display: flex;
+   justify-content: center;
+}
+
+.ContainerSeach {
+   position: relative;
+   top: -213px;
 }

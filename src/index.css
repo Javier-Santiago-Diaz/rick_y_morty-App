@@ -5,7 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: URL("./assets/fonfo.jpg.crdownload");
+
+  /* background-size: contain; */
+  background-image: URL('../src/assets/fonfo.jpg');
 }
 
 code {
