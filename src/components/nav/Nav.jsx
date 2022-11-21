@@ -1,9 +1,10 @@
-import SearchBar from './SearchBar'
+import SearchBar from '../searchBar/SearchBar.jsx'
+import s from '../nav/Nav.module.css'
 import React from 'react'
 
-export default function NavBar(props) {
+export default function Nav(props) {
     return (
-        <div className='Nav'>
+        <div className={s.Nav}>
             <SearchBar onSearch={props.onSearch} />
         </div>
     )
