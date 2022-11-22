@@ -4,15 +4,15 @@ import { useState } from 'react'
 export default function SearchBar(props) {
    const [id, setId] = useState("")
 
-   const onchange = (e) => {
+   const handleChange = (e) => {
       const { value } = e.target;
       setId(value)
    }
 
    return (
       <div>
-         <input type='search' className={s.input} onchange={onchange} id="" />
-         <button className={s.SearchButton} onClick={() => props.onSearch(id)}>Agregar</button>
+         <input type='search' className={s.input} onChange={handleChange} />
+         <button onClick={() => props.onSearch(id)} className={s.SearchButton} >Agregar</button>
       </div>
    );
 }
