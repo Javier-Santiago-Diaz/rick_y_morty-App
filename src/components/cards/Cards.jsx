@@ -5,15 +5,16 @@ export default function Cards(props) {
    const { characters } = props;
    return (
       <div className={s.Cards}>{
-         characters.map((character) =>
+         characters.map((character, i) =>
             < Card
                name={character.name}
                species={character.species}
                gender={character.gender}
                image={character.image}
-               key={character.name}
+               key={i}
                onClose={props.onClose}
-               id={character.id}
+
+               detailId={character.id}
             />)
       }</div>)
       ;
