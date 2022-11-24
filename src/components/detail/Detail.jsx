@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom'
 
 export default function Detail() {
     const { detailId } = useParams()
-    const [character, setCharacter] = useState({})
-    console.log(character);
+    const [character, setCharacter] = useState("")
     useEffect(() => {
         fetch(`https://rickandmortyapi.com/api/character/${detailId}`)
             .then((response) => response.json())
@@ -21,6 +20,7 @@ export default function Detail() {
             });
         return setCharacter({});
     }, [detailId])
+    console.log(character);
     return (
         <div>
             <Link to='/'>
