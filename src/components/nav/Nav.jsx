@@ -7,7 +7,7 @@ export default function Nav(props) {
     const { onSearch } = props
     return (
         <div className={s.Nav}>
-            <NavLink to="/" className={s.prueba} >Home</NavLink>
+            <NavLink to="/home" className={s.prueba} >Home</NavLink>
             <Link to="/about" >About</Link>
             <SearchBar onSearch={onSearch} />
         </div >

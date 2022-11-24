@@ -2,6 +2,7 @@ import s from './Card.module.css'
 import { Link } from 'react-router-dom'
 
 export default function Card(props) {
+   console.log(props);
    return (
       <div className={s.Card}>
          <div className={s.buttonContainerCard}>

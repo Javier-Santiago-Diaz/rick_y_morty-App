@@ -35,7 +35,7 @@ function App() {
     <div className='App' style={{ padding: '25px' }}>
       <Nav onSearch={onSearch} />
       <Routes>
-        <Route path='/' element={<Cards characters={characters} onClose={onClose} />} />
+        <Route path='/home' element={<Cards characters={characters} onClose={onClose} />} />
         <Route path='/about' element={<About />} className='prueba' />
         <Route path='/detail/:detailId' element={<Detail />} />
       </Routes>
