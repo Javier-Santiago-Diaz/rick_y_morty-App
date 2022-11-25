@@ -8,7 +8,7 @@ export default function Card(props) {
          <div className={s.buttonContainerCard}>
             <button onClick={() => props.onClose(props.id)} className={s.BotonCard}> X </button>
          </div>
-         <Link to={`/detail/${props.detailId}`} >
+         <Link to={`/detail/${props.id}`} >
             <h2 className={s.Cardtextname}> {props.name} </h2>
          </Link>
          <h2 className={s.Cardtexspecies}> {props.species} </h2>

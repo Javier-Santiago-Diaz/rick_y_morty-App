@@ -5,11 +5,6 @@ export default function About() {
         <div>
             <div className={styles.titulo}>Nombre del programador: Javier Santiago Diaz Arcila</div>
             <div className={styles.cuerpo}>Futuro de la aplicacion: Por ir descubriendo</div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
             <div className={styles.oe}> EMPEZANDO</div>
         </div>
     )

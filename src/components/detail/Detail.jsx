@@ -32,7 +32,7 @@ export default function Detail() {
             <h2>Nombre:{character.name}</h2>
             <h2>Especie:{character.species}</h2>
             <h2>Genero.{character.gender}</h2>
-            {/* <h2>Origen:{character.origin?.name}</h2> */}
+            {/* <h5>Origen:{character.origin?.name}</h5> */}
             <img src={character.image} alt="" />
         </div>
     )

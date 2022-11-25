@@ -26,8 +26,8 @@ function App() {
       });
   }
 
-  const onClose = (id) => {
-    setCharacters(characters.filter(ele => ele.id !== id))
+  const onClose = (e) => {
+    setCharacters(characters.filter(char => char.id !== e))
   }
 
 
