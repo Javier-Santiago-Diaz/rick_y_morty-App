@@ -6,10 +6,20 @@ import { NavLink } from 'react-router-dom'
 export default function Nav(props) {
     const { onSearch } = props
     return (
-        <div className={s.nav1}>
-            <NavLink to="/home" className={s.home} >Home</NavLink>
-            <NavLink to="/about" className={s.about} >About</NavLink >
-            <SearchBar onSearch={onSearch} />
+        <div className={s.container}>
+            <div className={s.container1}>
+                <div className={s.home}>
+                    <NavLink to="/home" className={s.homeL} >Principal...</NavLink>
+                </div>
+
+                <div className={s.home}>
+                    <NavLink to="/about" className={s.aboutN} >SobreNosotros...</NavLink >
+                </div>
+
+                <div >
+                    <SearchBar onSearch={onSearch} />
+                </div>
+            </div>
         </div >
     )
 }

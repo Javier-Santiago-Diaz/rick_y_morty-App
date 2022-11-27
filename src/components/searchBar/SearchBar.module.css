@@ -1,0 +1,15 @@
+.s {
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.container {
+    position: relative;
+    bottom: 30px;
+    left: 18px;
+}
+
+.boton {
+    border-radius: 8px;
+    font-size: 18px;
+}

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import s from './Detail.module.css'
 
 export default function Detail() {
     const { detailId } = useParams()
@@ -24,16 +25,19 @@ export default function Detail() {
 
 
     return (
-        <div>
-            <Link to='/home'>
-                <button>X</button>
-            </Link>
-            <div>Detail</div>
-            <h2>Nombre:{character.name}</h2>
-            <h2>Especie:{character.species}</h2>
-            <h2>Genero.{character.gender}</h2>
-            {/* <h5>Origen:{character.origin?.name}</h5> */}
-            <img src={character.image} alt="" />
+        <div className={s.container}>
+            <NavLink to='/home'  >
+                <button className={s.boton}>X</button>
+            </NavLink>
+            <h className={s.d}>DETALLES</h>
+            <div className={s.general}>
+                <h2 >Nombre:{character.name}</h2>
+                <h2 >Especie:{character.species}</h2>
+                <h2 >Genero.{character.gender}</h2>
+                <h5>Origen:{character.origin?.name}</h5>
+            </div>
+
+            <img src={character.image} className={s.img} alt='' />
         </div>
     )
 }

@@ -1,19 +1,27 @@
 import s from './Card.module.css'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 export default function Card(props) {
    console.log(props);
    return (
-      <div className={s.Card}>
-         <div className={s.buttonContainerCard}>
-            <button onClick={() => props.onClose(props.id)} className={s.BotonCard}> X </button>
+      <div className={s.container}>
+
+         <div>
+            <button onClick={() => props.onClose(props.id)} className={s.boton}> X </button>
          </div>
-         <Link to={`/detail/${props.id}`} >
-            <h2 className={s.Cardtextname}> {props.name} </h2>
-         </Link>
-         <h2 className={s.Cardtexspecies}> {props.species} </h2>
-         <h2 className={s.Cardgender}> {props.gender} </h2>
-         <img src={props.image} alt="" className={s.imgCard} />
+
+         <div className={s.name}>
+            <NavLink to={`/detail/${props.id}`} className={s.link}>
+               {props.name}
+            </NavLink>
+         </div>
+
+         <h2 className={s.species}> {props.species} </h2>
+         <h2 className={s.gender}>{props.gender} </h2>
+
+         <div >
+            <img src={props.image} alt="" className={s.img} />
+         </div>
       </div >
    );
 }

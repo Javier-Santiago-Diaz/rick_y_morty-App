@@ -1,18 +1,16 @@
-import s from '../searchBar/SearchBar.mocule.css'
+import s from './SearchBar.module.css'
 import { useState } from 'react'
 
 export default function SearchBar(props) {
    const [id, setId] = useState("")
-
    const handleChange = (e) => {
       const { value } = e.target;
       setId(value)
    }
-
    return (
-      <div>
-         <input type='search' className={s.input} onChange={handleChange} />
-         <button onClick={() => props.onSearch(id)} className={s.SearchButton} >Agregar</button>
+      <div className={s.container}>
+         <input type='search' className={s.s} onChange={handleChange} />
+         <button onClick={() => props.onSearch(id)} className={s.boton} >Agregar</button>
       </div>
    );
 }
