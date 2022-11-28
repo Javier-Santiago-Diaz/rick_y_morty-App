@@ -1,15 +1,15 @@
-.s {
-    border-radius: 8px;
-    font-size: 18px;
-}
-
-.container {
-    position: relative;
-    bottom: 30px;
-    left: 18px;
-}
-
 .boton {
+    height: 30px;
     border-radius: 8px;
-    font-size: 18px;
+    border: 1px solid black;
+    color: black solid black;
+    background-color: green;
+
+}
+
+.input {
+    height: 30px;
+    width: 140px;
+    border-radius: 8px;
+    border: 1px solid black;
 }

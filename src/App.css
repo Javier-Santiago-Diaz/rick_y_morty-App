@@ -1,13 +1,3 @@
 .App {
    text-align: center;
 }
-
-.ContainerCard {
-   display: flex;
-   justify-content: center;
-}
-
-.ContainerSeach {
-   position: relative;
-   top: -213px;
-}

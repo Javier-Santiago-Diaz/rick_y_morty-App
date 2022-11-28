@@ -6,7 +6,7 @@ export default function validation(inputs) {
     const regexpass = new RegExp(/^[a-zA-Z0-9!@#$%^&*]{6,16}$/)
 
     if (!regexEmail.test(inputs.username)) {
-        error.username = "debe ser un correo electronico "
+        error.username = "Debe ser un correo electronico "
     }
     if (!inputs.username) {
         error.username = 'add your name'
@@ -15,7 +15,7 @@ export default function validation(inputs) {
         error.username = 'Max 35 caracteres'
     }
     if (!regexpass.test(inputs.password)) {
-        error.password = 'no valido minimo 6-10 caracteres'
+        error.password = 'No valido minimo entre 6-10 caracteres'
     }
     return error
 }

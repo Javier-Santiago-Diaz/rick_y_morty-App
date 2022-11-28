@@ -32,41 +32,40 @@ export default function Form(props) {
     }
 
     return (
-        <div className={styles.container1}>
+        <div className={styles.container}>
+            <h1 className={styles.accede}>Accede a ver los personajes de Rick Y Morthy</h1>
 
-            <div className={styles.container2}>
-                <h1>Accede a ver los personajes de Rick Y Morthy</h1>
-                <form onSubmit={handleSubmit}>
-                    <div className={styles.cajas1}>
-                        <label htmlFor="correo" className={styles.name}>Correo Electronico:  </label>
-                        <input type="text"
-                            id="correo"
-                            name="username"
-                            value={userdata.username}
-                            className={styles.input1}
-                            onChange={handleInputChange}
-                        />
-                        <span className={styles.error}>
-                            {error.username ? error.username : null}
-                        </span>
-                    </div>
+            <form onSubmit={handleSubmit} className={styles.form}>
+                <div className={styles.caja1}>
+                    <label htmlFor="correo" className={styles.name}>Correo Electronico:  </label>
+                    <input type="text"
+                        id="correo"
+                        name="username"
+                        value={userdata.username}
+                        className={styles.input1}
+                        onChange={handleInputChange}
+                    />
+                    <span className={styles.error}>
+                        {error.username ? error.username : null}
+                    </span>
+                </div>
 
-                    <div className={styles.cajas2}>
-                        <label htmlFor="contraseña" className={styles.contra}>Contraseña:  </label>
-                        <input type="text"
-                            id="contraseña"
-                            name="password"
-                            value={userdata.password}
-                            className={styles.input2}
-                            onChange={handleInputChange}
-                        />
-                        <span className={styles.error}>
-                            {error.password ? error.password : null}
-                        </span>
-                    </div>
-                    <button type="submit" className={styles.boton}>Login/Acceso</button>
-                </form>
-            </div>
+                <div className={styles.caja2}>
+                    <label htmlFor="contraseña" className={styles.passw}>Contraseña:  </label>
+                    <input type="text"
+                        id="contraseña"
+                        name="password"
+                        value={userdata.password}
+                        className={styles.input2}
+                        onChange={handleInputChange}
+                    />
+                    <span className={styles.error}>
+                        {error.password ? error.password : null}
+                    </span>
+                </div>
+                <button type="submit" className={styles.boton}>Login</button>
+            </form>
+
         </div>
     )
 }

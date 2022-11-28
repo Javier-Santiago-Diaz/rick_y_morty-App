@@ -26,18 +26,22 @@ export default function Detail() {
 
     return (
         <div className={s.container}>
-            <NavLink to='/home'  >
+
+            <NavLink to='/home' className={s.link} >
                 <button className={s.boton}>X</button>
             </NavLink>
+
             <h className={s.d}>DETALLES</h>
+
             <div className={s.general}>
                 <h2 >Nombre:{character.name}</h2>
                 <h2 >Especie:{character.species}</h2>
                 <h2 >Genero.{character.gender}</h2>
-                <h5>Origen:{character.origin?.name}</h5>
             </div>
-
-            <img src={character.image} className={s.img} alt='' />
+            {/* <h5>Origen:{character.origin?.name}</h5> */}
+            <div className={s.img2}>
+                <img src={character.image} className={s.img} alt='' />
+            </div>
         </div>
     )
 }

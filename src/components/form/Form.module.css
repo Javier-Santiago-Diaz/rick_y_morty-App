@@ -1,0 +1,57 @@
+.container {
+    background: rgba(28, 65, 68, 0.671);
+    height: 600px;
+    border-radius: 10px;
+}
+
+.accede {
+    position: relative;
+    height: 150px;
+    align-items: center;
+    top: 40px;
+    color: white;
+}
+
+.form {
+    align-items: center;
+    margin-top: 50px;
+
+}
+
+.name {
+    position: relative;
+    color: white;
+    right: 26px;
+}
+
+.input1 {
+    position: relative;
+    right: 26px;
+}
+
+.caja1 {
+    height: 90px;
+}
+
+.caja2 {
+    height: 90px;
+}
+
+.boton {
+    position: relative;
+    top: 0px;
+    color: white;
+    background-color: red
+}
+
+.error {
+    display: flex;
+    justify-content: center;
+    color: red;
+}
+
+.passw {
+    /* position: relative;
+    top: 50px; */
+    color: white;
+}

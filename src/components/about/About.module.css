@@ -1,0 +1,13 @@
+.container {
+    position: relative;
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 2000px;
+    border-radius: 20px;
+}
+
+.titulo {
+    color: rgb(255, 38, 14);
+}

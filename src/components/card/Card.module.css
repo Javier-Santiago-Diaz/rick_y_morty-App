@@ -1,0 +1,49 @@
+.container {
+    height: 300px;
+    width: 220px;
+}
+
+.img {
+    height: 200px;
+    width: 190px;
+    border-bottom: 33px solid white;
+    border-radius: 8px;
+}
+
+.link {
+    background-color: rgba(0, 0, 0, 0.566);
+    color: white;
+    border-radius: 8px;
+    position: relative;
+    top: 200px;
+}
+
+.boton {
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+    position: relative;
+    bottom: 330px;
+    left: 80px;
+}
+
+.species {
+    position: relative;
+    bottom: 47px;
+    display: flex;
+    left: 20px;
+    width: 70px;
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+.gender {
+    position: relative;
+    font-size: 11px;
+    left: 20px;
+    width: 70px;
+    border-radius: 5px;
+    left: 110px;
+    bottom: 90px;
+
+}
