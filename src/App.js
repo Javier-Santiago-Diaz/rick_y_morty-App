@@ -6,6 +6,7 @@ import { Route, Routes, useLocation, useNavigate } from 'react-router-dom'
 import About from './components/about/About.jsx'
 import Detail from './components/detail/Detail'
 import Form from './components/form/Form'
+import Favorites from './components/favorites/favorites'
 
 function App() {
   // const example = {
@@ -58,6 +59,7 @@ function App() {
         <Route path='/home' element={<Cards characters={characters} onClose={onClose} />} />
         <Route path='/about' element={<About />} className='prueba' />
         <Route path='/detail/:detailId' element={<Detail />} />
+        <Route path='/favorites' element={<Favorites />} />
       </Routes>
     </div>
   )

@@ -20,6 +20,10 @@ export default function Nav(props) {
                 <SearchBar onSearch={onSearch} />
             </div>
 
+            <div>
+                <NavLink to="/favorite">Favorites</NavLink>
+            </div>
+
         </div >
     )
 }

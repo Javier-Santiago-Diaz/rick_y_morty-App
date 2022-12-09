@@ -1,6 +1,6 @@
 import s from './Card.module.css';
-import { NavLink } from 'react-router-dom';
 import { addFavorites, deleteFavorites } from '../../redux/actions';
+import { NavLink } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 
