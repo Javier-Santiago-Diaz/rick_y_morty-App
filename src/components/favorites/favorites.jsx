@@ -1,14 +1,13 @@
 import { connect } from "react-redux"
+import Cards from "../cards/Cards"
 
-export function Favorites({ myFavorites }) {
+export function Favorites(props) {
     return (
         <div>
             <div>Favorites</div>
-            {myFavorites.map(favorit => {
-                <div>
-                    <h3>{favorit.name}</h3>
-                    <img src={favorit.img} alt="" />
-                </div>
+            {props.myFavorites.map(ele => {
+                <Cards
+                />
             })}
         </div>
     )

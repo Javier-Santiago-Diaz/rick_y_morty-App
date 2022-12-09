@@ -21,7 +21,7 @@ export default function Nav(props) {
             </div>
 
             <div>
-                <NavLink to="/favorite">Favorites</NavLink>
+                <NavLink to="/favorites">Favorites</NavLink>
             </div>
 
         </div >
