@@ -20,6 +20,6 @@ export default function rootReducer(state = initialState, { types, payload }) {
             }
 
         default:
-            return { ...state }
+            return state
     }
 }

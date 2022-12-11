@@ -1,26 +1,29 @@
 import s from './Card.module.css';
+import React from 'react';
 import { addFavorites, deleteFavorites } from '../../redux/actions';
 import { NavLink } from 'react-router-dom';
-import { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 
 export function Card(props) {
-   const [isFav, setIsfav] = useState(false)
-   useEffect(() => {
+   const [isFav, setIsfav] = React.useState(false)
+
+   React.useEffect(() => {
       props.myFavorites.forEach((fav) => {
-         if (fav.id === props.id) {
+         if (fav.id === props.state.id) {
             setIsfav(true);
          }
       });
-   }, [props.myFavorites]);
+   },
+      // eslint-disable-next-line
+      [props.myFavorites])
 
    function handleFavorite() {
-      if (isFav) {
+      if (isFav === true) {
          setIsfav(false)
-         props.deleteFavorites(props.id)
-      } else {
+         props.delf(props.id)
+      } if (isFav === false) {
          setIsfav(true)
-         props.addFavorites(props.id)
+         props.addf(props)
       }
    }
 
@@ -50,20 +53,17 @@ export function Card(props) {
    );
 }
 
-export function mapDispatchToProps(dispatch) {
-   return {
-      addFavorites: (id) => {
-         dispatch(addFavorites(id))
-      },
-      deleteFavorites: (id) => {
-         dispatch(deleteFavorites(id))
-      }
-   }
-}
-
 export function mapStatetoProps(state) {
    return {
       myFavorites: state.myFavorites
+   }
+}
+
+export function mapDispatchToProps(dispatch) {
+   return {
+      addF: (fav) => dispatch(addFavorites(fav))
+      ,
+      delf: (id) => dispatch(deleteFavorites(id))
    }
 }
 

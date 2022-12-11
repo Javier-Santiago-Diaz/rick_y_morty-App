@@ -2,11 +2,12 @@ import './App.css'
 import Nav from '../src/components/nav/Nav.jsx'
 import Cards from './components/cards/Cards.jsx'
 import { useState, useEffect } from 'react'
-import { Route, Routes, useLocation, useNavigate } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import About from './components/about/About.jsx'
 import Detail from './components/detail/Detail'
 import Form from './components/form/Form'
 import Favorites from './components/favorites/favorites'
+import { useNavigate } from 'react-router-dom'
 
 function App() {
   // const example = {
@@ -49,7 +50,12 @@ function App() {
 
   useEffect(() => {
     !access && navigate('/');
-  }, [access]);
+    // eslint-disable-next-line
+  },
+    // eslint-disable-next-line
+    [access]
+    // eslint-disable-next-line
+  );
 
   return (
     <div className='App' style={{ padding: '25px' }}>
@@ -59,7 +65,7 @@ function App() {
         <Route path='/home' element={<Cards characters={characters} onClose={onClose} />} />
         <Route path='/about' element={<About />} className='prueba' />
         <Route path='/detail/:detailId' element={<Detail />} />
-        <Route path='/favorites' element={<Favorites />} />
+        <Route path='/favorites' element={<Favorites character={characters} />} />
       </Routes>
     </div>
   )
