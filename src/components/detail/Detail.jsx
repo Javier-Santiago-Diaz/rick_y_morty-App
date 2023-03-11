@@ -29,7 +29,7 @@ export default function Detail() {
         <button className={s.boton}>X</button>
       </NavLink>
 
-      <h className={s.d}>DETALLES</h>
+      <h1 className={s.d}>Detalles</h1>
 
       <div className={s.general}>
         <h2>Nombre:{character.name}</h2>

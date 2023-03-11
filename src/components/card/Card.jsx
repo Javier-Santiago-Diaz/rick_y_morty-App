@@ -48,9 +48,8 @@ export function Card(props) {
       <h5 className={s.species}>Species: {props.species} </h5>
       <h5 className={s.gender}>Gender:{props.gender} </h5>
       <div>
-        <button onClick={() => props.onClose(props.id)} className={s.boton}>
-          {" "}
-          X{" "}
+        <button onClick={props.onClose} className={s.boton}>
+          X
         </button>
       </div>
     </div>

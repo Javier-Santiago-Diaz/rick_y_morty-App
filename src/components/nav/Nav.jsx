@@ -3,8 +3,7 @@ import s from "../nav/Nav.module.css";
 import SearchBar from "../searchBar/SearchBar.jsx";
 import { NavLink } from "react-router-dom";
 
-export default function Nav(props) {
-  const { onSearch } = props;
+export default function Nav({ onSearch }) {
   return (
     <div className={s.container}>
       <div className={s.home}>

@@ -10,14 +10,9 @@ import Favorites from "./components/favorites/favorites";
 import { useNavigate } from "react-router-dom";
 
 function App() {
-  // const example = {
-  //   name: 'Morty Smith',
-  //   species: 'Human',
-  //   gender: 'Male',
-  //   image: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg',
-  // };
   const [characters, setCharacters] = useState([]);
-  function onSearch(character) {
+
+  const onSearch = (character) => {
     fetch(`https://rickandmortyapi.com/api/character/${character}`)
       .then((response) => response.json())
       .then((data) => {
@@ -27,14 +22,13 @@ function App() {
           window.alert("No hay personajes con ese ID");
         }
       });
-  }
+  };
 
-  const onClose = (evento) => {
-    setCharacters(characters.filter((char) => char.id !== evento));
+  const onClose = (id) => {
+    setCharacters(characters.filter((character) => character.id !== id));
   };
 
   const location = useLocation();
-  // location = {pathname:url }
 
   const navigate = useNavigate();
   const [access, setAccess] = useState(false);
