@@ -1,7 +1,9 @@
-import { connect } from "react-redux";
+import { useSelector } from "react-redux";
 import s from "./favorite.module.css";
 
-export function Favorites({ myFavorites }) {
+export default function Favorites() {
+  const { myFavorites } = useSelector((state) => state);
+
   return (
     <div>
       <span className={s.title}>Favorites</span>
@@ -14,11 +16,3 @@ export function Favorites({ myFavorites }) {
     </div>
   );
 }
-
-export function mapStateToProps(state) {
-  return {
-    myFavorites: state.myFavorites,
-  };
-}
-
-export default connect(mapStateToProps, null)(Favorites);

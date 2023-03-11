@@ -1,42 +1,42 @@
 import s from "./Card.module.css";
-import React from "react";
 import { addFavorites, deleteFavorites } from "../../redux/actions";
 import { NavLink } from "react-router-dom";
-import { connect } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useState } from "react";
 
-export function Card({ id, name, image, species, gender, onClose }) {
-  const [isFav, setIsfav] = React.useState(false);
+export default function Card({ id, name, image, species, gender, onClose }) {
+  const [isFav, setIsfav] = useState(false);
 
-  /* React.useEffect(
-    () => {
-      myFavorites.forEach((fav) => {
-        if (fav.id === state.id) {
-          setIsfav(true);
-        }
-      });
-    },
-    // eslint-disable-next-line
-    [myFavorites]
-  );
+  const dispatch = useDispatch();
 
-  function handleFavorite() {
+  const myFavorites = useSelector((state) => state.myFavorites);
+
+  const handleFavorite = () => {
     if (isFav === true) {
       setIsfav(false);
-      delf(id);
-    }
-    if (isFav === false) {
+      dispatch(deleteFavorites(id));
+    } else {
       setIsfav(true);
-      addf(props);
+      dispatch(addFavorites({ id, name, image, species, gender, onClose }));
     }
-  }
- */
+  };
+
+  useEffect(() => {
+    myFavorites.forEach((fav) => {
+      if (fav.id === id) {
+        setIsfav(true);
+      }
+    });
+  }, [myFavorites,id]);
+
   return (
     <div className={s.container}>
-      {/*   {isFav ? (
+      {isFav ? (
         <button onClick={handleFavorite}>❤️</button>
       ) : (
         <button onClick={handleFavorite}>🤍</button>
-      )} */}
+      )}
+
       <div className={s.name}>
         <NavLink to={`/detail/${id}`} className={s.link}>
           {name}
@@ -58,18 +58,3 @@ export function Card({ id, name, image, species, gender, onClose }) {
     </div>
   );
 }
-
-export function mapStatetoProps(state) {
-  return {
-    myFavorites: state.myFavorites,
-  };
-}
-
-export function mapDispatchToProps(dispatch) {
-  return {
-    addF: (fav) => dispatch(addFavorites(fav)),
-    delf: (id) => dispatch(deleteFavorites(id)),
-  };
-}
-
-export default connect(mapStatetoProps, mapDispatchToProps)(Card);

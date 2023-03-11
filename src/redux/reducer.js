@@ -13,13 +13,12 @@ export default function rootReducer(state = initialState, { types, payload }) {
       };
 
     case DELETE_FAVORITES:
-      const filter = state.myFavorites.filter((ele) => ele.id !== payload);
       return {
         ...state,
-        myFavorites: filter,
+        myFavorites: state.myFavorites.filter((char) => char.id !== payload),
       };
 
     default:
-      return state;
+      return { ...state };
   }
 }
