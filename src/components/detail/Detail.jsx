@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import s from "./Detail.module.css";
 
 export default function Detail() {
@@ -25,20 +25,22 @@ export default function Detail() {
 
   return (
     <div className={s.container}>
-      <NavLink to="/home" className={s.link}>
-        <button className={s.boton}>X</button>
-      </NavLink>
+      <h1 className={s.d}>Detalle del personaje</h1>
 
-      <h1 className={s.d}>Detalles</h1>
+      <Link to="/home" className={s.link}>
+        <button className={s.boton}>X</button>
+      </Link>
+
+      <div className={s.img2}>
+        <img src={character?.image} className={s.img} alt="" />
+      </div>
 
       <div className={s.general}>
-        <h2>Nombre:{character.name}</h2>
-        <h2>Especie:{character.species}</h2>
-        <h2>Genero.{character.gender}</h2>
-      </div>
-      {/* <h5>Origen:{character.origin?.name}</h5> */}
-      <div className={s.img2}>
-        <img src={character.image} className={s.img} alt="" />
+        <h2>Nombre:{character?.name}</h2>
+        <h2>status: {character?.status}</h2>
+        <h2>Especie:{character?.species}</h2>
+        <h2>Genero: {character?.gender}</h2>
+        <h2>origin: {character?.origin?.name}</h2>
       </div>
     </div>
   );
