@@ -4,8 +4,8 @@ const initialState = {
   myFavorites: [],
 };
 
-export default function rootReducer(state = initialState, { types, payload }) {
-  switch (types) {
+const rootReducer = (state = initialState, { type, payload }) => {
+  switch (type) {
     case ADD_FAVORITES:
       return {
         ...state,
@@ -21,4 +21,5 @@ export default function rootReducer(state = initialState, { types, payload }) {
     default:
       return { ...state };
   }
-}
+};
+export default rootReducer;

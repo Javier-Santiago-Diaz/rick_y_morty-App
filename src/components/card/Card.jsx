@@ -1,33 +1,32 @@
 import s from "./Card.module.css";
+import { useEffect, useState } from "react";
 import { addFavorites, deleteFavorites } from "../../redux/actions";
 import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect, useState } from "react";
 
 export default function Card({ id, name, image, species, gender, onClose }) {
-  const [isFav, setIsfav] = useState(false);
+  const [isFav, setIsFav] = useState(false);
 
   const dispatch = useDispatch();
-
   const myFavorites = useSelector((state) => state.myFavorites);
-
-  const handleFavorite = () => {
-    if (isFav === true) {
-      setIsfav(false);
-      dispatch(deleteFavorites(id));
-    } else {
-      setIsfav(true);
-      dispatch(addFavorites({ id, name, image, species, gender, onClose }));
-    }
-  };
 
   useEffect(() => {
     myFavorites.forEach((fav) => {
       if (fav.id === id) {
-        setIsfav(true);
+        setIsFav(true);
       }
     });
-  }, [myFavorites,id]);
+  }, [myFavorites, id]);
+
+  const handleFavorite = () => {
+    if (isFav) {
+      setIsFav(false);
+      dispatch(deleteFavorites(id));
+    } else {
+      setIsFav(true);
+      dispatch(addFavorites({ id, name, image, species, gender, onClose }));
+    }
+  };
 
   return (
     <div className={s.container}>
@@ -36,7 +35,6 @@ export default function Card({ id, name, image, species, gender, onClose }) {
       ) : (
         <button onClick={handleFavorite}>🤍</button>
       )}
-
       <div className={s.name}>
         <NavLink to={`/detail/${id}`} className={s.link}>
           {name}

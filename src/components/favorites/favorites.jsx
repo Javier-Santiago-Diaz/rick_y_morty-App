@@ -1,15 +1,14 @@
 import { useSelector } from "react-redux";
-import s from "./favorite.module.css";
 
 export default function Favorites() {
-  const { myFavorites } = useSelector((state) => state);
-
+  const myFavorites = useSelector((state) => state.myFavorites);
   return (
     <div>
-      <span className={s.title}>Favorites</span>
       {myFavorites.map((character) => (
         <div>
-          <h3>{character.name}</h3>
+          <h2>Nombre:{character?.name}</h2>
+          <h2>Especie:{character?.species}</h2>
+          <h2>Genero: {character?.gender}</h2>
           <img src={character.image} alt="" />
         </div>
       ))}
