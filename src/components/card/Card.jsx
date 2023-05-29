@@ -30,29 +30,37 @@ export default function Card({ id, name, image, species, gender, onClose }) {
 
   return (
     <div className={s.container}>
-      {isFav ? (
-        <button onClick={handleFavorite}>❤️</button>
-      ) : (
-        <button onClick={handleFavorite}>🤍</button>
-      )}
-      <div className={s.name}>
-        <NavLink to={`/detail/${id}`} className={s.link}>
-          {name}
-        </NavLink>
-      </div>
-
       <div>
         <img src={image} alt="" className={s.img} />
       </div>
 
-      <h5 className={s.species}>Species: {species} </h5>
-      <h5 className={s.gender}>Gender:{gender} </h5>
+      <NavLink to={`/detail/${id}`}>
+        <div className={s.name}>{name}</div>
+      </NavLink>
 
-      <div>
-        <button onClick={onClose} className={s.boton}>
-          X
+      {isFav ? (
+        <button onClick={handleFavorite} className={s.corazon}>
+          ❤️
         </button>
-      </div>
+      ) : (
+        <button onClick={handleFavorite} className={s.corazon}>
+          🤍
+        </button>
+      )}
+      <button onClick={onClose} className={s.boton}>
+        X
+      </button>
+
+      <h5 className={s.species}>
+        <p style={{ position: "relative", top: "7px", left: "12px" }}>
+          Species: {species}{" "}
+        </p>
+      </h5>
+      <h5 className={s.gender}>
+        <p style={{ position: "relative", top: "7px", left: "23px" }}>
+          Gender:{gender}
+        </p>
+      </h5>
     </div>
   );
 }

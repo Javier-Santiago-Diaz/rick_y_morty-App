@@ -1,49 +1,67 @@
 .container {
-    height: 300px;
-    width: 220px;
+  height: 320px;
+  width: 249px;
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
-
 .img {
-    height: 200px;
-    width: 190px;
-    border-bottom: 33px solid white;
-    border-radius: 8px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 45px solid white;
+  border-top: 33px solid white;
+  border-radius: 5px;
 }
-
-.link {
-    background-color: rgba(0, 0, 0, 0.566);
-    color: white;
-    border-radius: 8px;
-    position: relative;
-    top: 200px;
+.name {
+  font-size: 0.9rem;
+  position: relative;
+  top: -20rem;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  color: black;
+  max-height: 25px;
+  overflow: auto;
+  word-wrap: break-word;
+  border-radius: 2rem;
 }
-
 .boton {
-    color: white;
-    background-color: red;
-    border-radius: 5px;
-    position: relative;
-    bottom: 330px;
-    left: 80px;
+  position: relative;
+  font-size: 0.8rem;
+  border-radius: 0.7rem;
+  left: 6rem;
+  top: -21.8rem;
+  background-color: red;
+  color: white;
+  border: none;
 }
-
+.corazon {
+  position: relative;
+  font-size: 0.9rem;
+  border-radius: 0.7rem;
+  left: -5.8rem;
+  top: -21.7rem;
+  background-color: none;
+  border: none;
+}
 .species {
-    position: relative;
-    bottom: 47px;
-    display: flex;
-    left: 20px;
-    width: 70px;
-    border-radius: 5px;
-    font-size: 10px;
+  font-size: 0.8rem;
+  position: relative;
+  margin-left: 7.7rem;
+  top: -88px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  overflow: auto;
+  word-wrap: break-word;
 }
-
 .gender {
-    position: relative;
-    font-size: 11px;
-    left: 20px;
-    width: 70px;
-    border-radius: 5px;
-    left: 110px;
-    bottom: 90px;
-
+  font-size: 0.8rem;
+  position: relative;
+  position: relative;
+  margin-right: 7.8rem;
+  top: -136.5px;
+  height: 39.5px;
+  display: flex;
+  align-items: center;
+  overflow: auto;
+  word-wrap: break-word;
 }
