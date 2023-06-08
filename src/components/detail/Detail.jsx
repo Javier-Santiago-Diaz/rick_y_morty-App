@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import s from "./Detail.module.css";
 
 export default function Detail() {
   const { detailId } = useParams();
@@ -24,23 +23,33 @@ export default function Detail() {
   }, [detailId]);
 
   return (
-    <div className={s.container}>
-      <h1 className={s.d}>Detalle del personaje</h1>
+    <div>
+      <br />
 
-      <Link to="/home" className={s.link}>
-        <button className={s.boton}>X</button>
-      </Link>
+      <h1 className="text-danger">Detalle del personaje</h1>
+      <br />
+      <br />
 
-      <div className={s.img2}>
-        <img src={character?.image} className={s.img} alt="" />
-      </div>
+      <div className="container-fluid  ">
+        <div className="row   d-flex align-items-center justify-content-center">
+          <div className="col-sm-6 ">
+            <img src={character?.image} alt="" className="rounded" />
+          </div>
 
-      <div className={s.general}>
-        <h2>Nombre:{character?.name}</h2>
-        <h2>status: {character?.status}</h2>
-        <h2>Especie:{character?.species}</h2>
-        <h2>Genero: {character?.gender}</h2>
-        <h2>origin: {character?.origin?.name}</h2>
+          <div className="col-sm-6 text-white">
+            <div>
+              <h2>Nombre:{character?.name}</h2>
+              <h2>status: {character?.status}</h2>
+              <h2>Especie:{character?.species}</h2>
+              <h2>Genero: {character?.gender}</h2>
+              <h2>origin: {character?.origin?.name}</h2>
+
+              <button className="rounded">
+                <Link to="/home">Volver</Link>
+              </button>
+            </div>{" "}
+          </div>
+        </div>
       </div>
     </div>
   );

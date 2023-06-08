@@ -13,7 +13,7 @@ export default function SearchBar({ onSearch }) {
         type="search"
         value={character}
         onChange={handleChange}
-        placeholder="Digita numeros"
+        placeholder="Digita numeros del 1 al 826"
         className={s.input}
       />
       <button onClick={() => onSearch(character)} className={s.boton}>

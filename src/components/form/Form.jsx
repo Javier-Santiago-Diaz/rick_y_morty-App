@@ -34,12 +34,6 @@ export default function Form(props) {
 
   return (
     <div className="container-fluid  vh-100 ">
-      <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-        crossorigin="anonymous"
-      ></link>
       <h2 className="container  text-white">
         Accede a ver los personajes de Rick Y Morthy
       </h2>
@@ -95,7 +89,7 @@ export default function Form(props) {
         </div>
       </form>
       <br />
-      <h4 className="container text-danger d-flex justify-content-center">
+      <h4 className="container text-success d-flex justify-content-center">
         Contraseña y correo de prueba
       </h4>
       <h5 className="container-fluid text-white d-flex justify-content-center  text-center ">
