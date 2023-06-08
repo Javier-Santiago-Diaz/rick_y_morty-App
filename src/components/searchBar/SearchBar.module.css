@@ -1,19 +1,22 @@
 .boton {
-    height: 30px;
-    border-radius: 8px;
-    border: 1px solid black;
-    color: black solid black;
-    background-color: green;
-    margin: 4px;
+  height: 30px;
+  border-radius: 8px;
+  border: 1px solid black;
+  color: black solid black;
+  background-color: green;
+  margin: 4px;
+}
+.boton:hover {
+  background-color: red;
 }
 
 .input {
-    height: 30px;
-    width: 140px;
-    border-radius: 8px;
-    border: 1px solid black;
-    margin: 4px;
+  height: 30px;
+  width: 140px;
+  border-radius: 8px;
+  border: 1px solid black;
+  margin: 4px;
 }
-.container{
-   height: 3.3rem;
+.container {
+  height: 3.3rem;
 }

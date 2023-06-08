@@ -33,49 +33,76 @@ export default function Form(props) {
   };
 
   return (
-    <div className={styles.container}>
-      <h1 className={styles.accede}>
+    <div className="container-fluid  vh-100 ">
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+        crossorigin="anonymous"
+      ></link>
+      <h2 className="container  text-white">
         Accede a ver los personajes de Rick Y Morthy
-      </h1>
+      </h2>
+      <br />
+      <br />
+      <br />
+      <br />
 
-      <form onSubmit={handleSubmit} className={styles.form}>
-        <div className={styles.caja1}>
-          <label htmlFor="correo" className={styles.name}>
-            Correo Electronico:{" "}
-          </label>
-          <input
-            type="text"
-            id="correo"
-            name="username"
-            value={userdata.username}
-            className={styles.input1}
-            onChange={handleInputChange}
-          />
+      <form onSubmit={handleSubmit} className="container-fluid">
+        <div className="row">
+          <div className="col   d-flex justify-content-center ">
+            <input
+              type="text"
+              id="correo"
+              name="username"
+              value={userdata.username}
+              onChange={handleInputChange}
+              placeholder="Correo Electronico"
+            />
+          </div>
           <span className={styles.error}>
             {error.username ? error.username : null}
           </span>
         </div>
 
-        <div className={styles.caja2}>
-          <label htmlFor="contraseña" className={styles.passw}>
-            Contraseña:{" "}
-          </label>
-          <input
-            type="text"
-            id="contraseña"
-            name="password"
-            value={userdata.password}
-            className={styles.input2}
-            onChange={handleInputChange}
-          />
+        <br />
+        <br />
+
+        <div className="row">
+          <div className="col  d-flex justify-content-center">
+            <input
+              type="text"
+              id="contraseña"
+              name="password"
+              value={userdata.password}
+              onChange={handleInputChange}
+              placeholder="Contraseña"
+            />
+          </div>
           <span className={styles.error}>
             {error.password ? error.password : null}
           </span>
         </div>
-        <button type="submit" className={styles.boton}>
-          Login
-        </button>
+        <br />
+        <br />
+
+        <div className="row">
+          <div className="col">
+            <button type="submit" className={styles.boton}>
+              Login
+            </button>
+          </div>
+        </div>
       </form>
+      <br />
+      <h4 className="container text-danger d-flex justify-content-center">
+        Contraseña y correo de prueba
+      </h4>
+      <h5 className="container-fluid text-white d-flex justify-content-center  text-center ">
+        correo: prueba@gmail.com / contraseña: 123prueba
+      </h5>
+      <br />
+      <br />
     </div>
   );
 }

@@ -57,7 +57,7 @@ export default function Card({ id, name, image, species, gender, onClose }) {
         </p>
       </h5>
       <h5 className={s.gender}>
-        <p style={{ position: "relative", top: "7px", left: "23px" }}>
+        <p style={{ position: "relative", top: "7.9px", left: "23px" }}>
           Gender:{gender}
         </p>
       </h5>
