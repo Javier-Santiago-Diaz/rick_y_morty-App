@@ -30,13 +30,13 @@ export default function Card({ id, name, image, species, gender, onClose }) {
 
   return (
     <div className={s.container}>
-      <div>
-        <img src={image} alt="" className={s.img} />
-      </div>
-
       <NavLink to={`/detail/${id}`}>
-        <div className={s.name}>{name}</div>
+        <div>
+          <img src={image} alt="" className={s.img} />
+        </div>{" "}
       </NavLink>
+
+      <div className={s.name}>{name}</div>
 
       {isFav ? (
         <button onClick={handleFavorite} className={s.corazon}>
