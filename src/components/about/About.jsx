@@ -14,7 +14,9 @@ export default function About() {
         personajes en preferencias para que no se pierdan y los llegas a
         eliminar de la Ruta principal, Disfrutala es hecha con esfuerzo para Ti.
       </h4>
-      <img src={prueba} alt="" className=" rounded" />
+      <div className="d-flex justify-content-center">
+        <img src={prueba} alt="" className="img-fluid rounded" />
+      </div>
       <br />
       <br />
     </div>

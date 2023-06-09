@@ -31,6 +31,7 @@ export default function Cards({ characters, onClose }) {
           style={{
             display: "flex",
             justifyContent: "space-around",
+            flexWrap: "wrap",
           }}
         >
           {p.map((e) => {

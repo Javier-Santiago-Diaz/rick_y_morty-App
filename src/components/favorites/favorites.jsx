@@ -33,14 +33,13 @@ export default function Favorites() {
         <div className="row  border border-danger  m-3 rounded bg-danger ">
           <div className="col-sm-5">
             <div className="d-flex justify-content-center">
-              <img src={character.image} alt="" className="rounded mt-2 mb-2" />
+              <img src={character.image} alt="" className="rounded " />
             </div>
           </div>
 
           <div className="col-sm-6   d-flex  flex-column align-items-center  ">
             <br />
-            <br />
-            <br />
+
             <h3 className="text-white  ">{character?.name}</h3>
 
             <h4 className="text-white ">{character?.species}</h4>
@@ -58,6 +57,7 @@ export default function Favorites() {
                 ""
               )}
             </div>
+            <br />
           </div>
         </div>
       ))}
