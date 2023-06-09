@@ -30,10 +30,14 @@ export default function Favorites() {
     <div className=" ">
       <h1 className="text-danger">Favorites</h1>
       {myFavorites.map((character) => (
-        <div className="row  border border-danger  m-3 rounded bg-danger ">
+        <div className="row  border border-danger rounded bg-danger  mt-2">
           <div className="col-sm-5">
             <div className="d-flex justify-content-center">
-              <img src={character.image} alt="" className="rounded " />
+              <img
+                src={character.image}
+                alt=""
+                className="rounded mt-1 mb-1 ml-1 mr-1 "
+              />
             </div>
           </div>
 
