@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/05-Proyecto_Web_Rick_and_Morty/static/css/main.80889c27.css",
+    "main.js": "/05-Proyecto_Web_Rick_and_Morty/static/js/main.2f77fe61.js",
+    "static/media/nuewctfu.webp": "/05-Proyecto_Web_Rick_and_Morty/static/media/nuewctfu.b84adf7c1013e0aa4bab.webp",
+    "static/media/1.jpg": "/05-Proyecto_Web_Rick_and_Morty/static/media/1.abff50a0411223271a1a.jpg",
+    "index.html": "/05-Proyecto_Web_Rick_and_Morty/index.html",
+    "main.80889c27.css.map": "/05-Proyecto_Web_Rick_and_Morty/static/css/main.80889c27.css.map",
+    "main.2f77fe61.js.map": "/05-Proyecto_Web_Rick_and_Morty/static/js/main.2f77fe61.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.80889c27.css",
+    "static/js/main.2f77fe61.js"
+  ]
+}
